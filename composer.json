@@ -1,0 +1,32 @@
+{
+    "name": "metanoia1989/verify-php",
+    "description": "veryfi is a php library for communicating with the Veryfi OCR API",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "metanoia1989",
+            "email": "sogaxili@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.5",
+        "guzzlehttp/guzzle": "^5.3.3|^6.2.1|^7.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^4.8.35|^5.4.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "veryfi\\": "src/"
+        },
+        "files": [
+            "src/functions.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "veryfi\\tests\\": "tests/"
+        }
+    }
+}
