@@ -165,12 +165,9 @@ class Client
         foreach ($payload_params as $key => $value) {
             $payload = "{$payload},{$key}:{$value}";
         }
-        // 加密处理
-        // secret_bytes = bytes(self.client_secret, "utf-8")
-        // payload_bytes = bytes(payload, "utf-8")
-        // tmp_signature = hmac.new(secret_bytes, msg=payload_bytes, digestmod=hashlib.sha256).digest()
-        // base64_signature = base64.b64encode(tmp_signature).decode("utf-8").strip()
-        // return base64_signature
+        $tmp_signature = hash_hmac("sha256", $payload, $this->client_secret);
+        $base64_signature = trim(base64_encode($tmp_signature));
+        return $base64_signature;
     }
 
     /**
