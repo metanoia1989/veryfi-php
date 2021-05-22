@@ -3,6 +3,7 @@
     "description": "veryfi is a php library for communicating with the Veryfi OCR API",
     "type": "library",
     "license": "MIT",
+    "homepage": "https://www.veryfi.com",
     "authors": [
         {
             "name": "metanoia1989",
